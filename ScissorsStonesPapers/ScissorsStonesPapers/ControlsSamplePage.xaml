@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScissorsStonesPapers.ControlsSamplePage">
+  <ScrollView>
+    <!-- We put everything to a container - StackView. You may think of it like of a full size div inside a HTML page -->
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="5, 20, 0, 0" Orientation="Vertical" Spacing="10">
+      <Label Text="Editor:" />
+      <Editor BackgroundColor="Silver" HorizontalOptions="FillAndExpand" Text="Click here and type something" />
+
+      <Label Text="Activity Indicator:"/>
+      <ActivityIndicator IsVisible="true" IsRunning="true" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  HeightRequest="50" WidthRequest="50" />
+
+      <Label Text="Button:" />
+      <Button Text="Button" BackgroundColor="Silver" TextColor="White" VerticalOptions="Fill" HorizontalOptions="Fill" />
+
+      <Label Text="DatePicker:"/>
+      <DatePicker Format="D" VerticalOptions="CenterAndExpand" />
+
+      <Label Text="Stepper:" />
+      <Stepper x:Name="TestStepper" Increment="5" Value="0" ValueChanged="OnStepperValueChanged" />
+      <Label Text="Stepper value: " x:Name="StepperValueLabel" FontSize="Small"/>
+
+      <Label Text="Slider:" />
+      <Slider HorizontalOptions="FillAndExpand"/>
+
+      <Label Text="Switch:"/>
+      <Switch HorizontalOptions="Center" />
+    </StackLayout>
+  </ScrollView>
+</ContentPage>
